@@ -30,7 +30,7 @@ oracle db. Therefore, it seemed like an obvious idea to use a source connector i
 had running.
 
 Our standard data flow topology for all the public fpml topics is as follows:
-Our xml-to-avro-kafka-streams application reads from the public-fpml-topic. It publishes a transformed version of the
+Our xml-to-avro-kafka-streams application reads from the public-fpml-topic (Yes..., unfortunately our upstream systems do not publish in avro or proto). It publishes a transformed version of the
 message in avro to the internal-avro-topic. This internal-topic is used to enforce our data model by leveraging the
 confluent schema registry. The kafka-connect-jdbc-sink-connector reads the shiny, validated messages on this topic and
 persists them on our oracle db. Note that the only code we write is the kafka-streams app which is stateless aside from
@@ -64,7 +64,7 @@ with our data model. The final result looks like this.
 ```
 
 
-We use the jdbc-source-connector to publish the upstreams systems data on a private kafka-avro-topic. A stateless
+We use the jdbc-source-connector to publish the upstreams systems data on a private kafka-avro-topic. A 'stateless'
 kafka-stream application is transforming and enriching the data from this topic and publishes it to our
 internal-avro-topic.
 
@@ -89,6 +89,8 @@ All in all, kafka-connect seems to make our lives easier. We get fast, stable an
 constraining ourselves to this tool we limit the number of APIs and protocols we need to master. A new datastore type,
 source or sink, can be integrated easily without having deep knowledge about the data store in question. Albeit, good
 understanding of the datastore evidently leads to a better connector configuration.
+
+And by the way, we managed to deliver at 'go-live' :)
 
 #### A shortened Example
 
