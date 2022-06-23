@@ -1,6 +1,6 @@
 ### flo's blogs
 
-- [Kafka Connect to the Resque]()
+- [kafka connect to the resque](https://florin-akermann.github.io/blog/kafka-connect-to-the-resque)
 - [telatmo on k8s](https://github.com/florin-akermann/telatmo-on-k8s-on-raspberrypi) Running telegraf, influxdb, grafana on raspberrypi to monitor netatmo indoor climate.
 - [A-surefire-way-to-a-distributed-monolith](https://florin-akermann.github.io/A-surefire-way-to-a-distributed-monolith/)
 - [telatmo](https://hub.docker.com/repository/docker/floak/telatmo) Polling data from the Netatmo api. 
