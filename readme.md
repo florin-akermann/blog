@@ -1,5 +1,7 @@
 ### flo's blogs
 
+- [contributing to apache kafka - continued](https://florin-akermann.github.io/blog/contributing-to-apache-kafka-continued.md)
+    KIP-962: Relax non-null key requirement in Kafka Streams
 - [kafka connect to the resque](https://florin-akermann.github.io/blog/kafka-connect-to-the-resque) Using Kafka Connect allowed us to deliver in time.
 - [contributing to apache kafka](https://florin-akermann.github.io/blog/contributing-to-apache-kafka.md) KIP-798: Possibility to add headers when using the kafka-console-producer.
 - [telatmo on k8s](https://github.com/florin-akermann/telatmo-on-k8s-on-raspberrypi) Running telegraf, influxdb, grafana on raspberrypi to monitor netatmo indoor climate.
